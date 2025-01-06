@@ -32,7 +32,7 @@
             <h2><img src="img/Almoços.png" alt=""></h2>
             <div class="cards">
                 <div class="broke">
-                    <div class="card">
+                    <div class="card"  id="chikenOpen">
                         <div class="card-info">
                             <h3>Frango</h3>
                                 <p>Frango grelhado</p>
@@ -43,7 +43,7 @@
                                 <img src="img/chiken.png" alt="Um prato feito de Frango">
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" id="beefOpen">
                         <div class="card-info">
                             <h3>Carne</h3>
                                 <p>Bife acebolado</p>
@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <div class="broke">
-                    <div class="card">
+                    <div class="card" >
                         <div class="card-info">
                             <h3>Omelete</h3>
                                 <p>Queijo</p>
@@ -68,7 +68,7 @@
                             <img src="img/egg.png" alt="">
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" >
                         <div class="card-info">
                             <h3>Outros</h3>
                                 <p>Linguiça acebolada</p>
@@ -190,6 +190,63 @@
                 </div>
             </div>
         </section>
+        <dialog id="chikenModal">
+            <div class="modalForm">
+                <div class="chikenForm" id="chikenForm">
+                    <h2>Frango</h2>
+                    <label for="grelhado">Grelhado</label>
+                        <input type="checkbox" id="grelhado">
+                    <label for="milanesa">À milanesa</label>
+                        <input type="checkbox" id="milanesa">
+                    <label for="parmegiana">À parmegiana</label>
+                        <input type="checkbox" id="parmegiana">
+                </div>
+                <div id="sideDishes">
+                    <h2>Acompanhamentos</h2>
+                    <label for="arroz">Arroz</label>
+                        <input type="checkbox" id="arroz">
+                    <label for="farofa">Farofa</label>
+                        <input type="checkbox" id="farofa">
+                    <label for="macarrao">Macarrão alho e óleo</label>
+                        <input type="checkbox" id="macarrao">
+                    <label for="feijao">Feijão</label>
+                        <input type="checkbox" id="feijao">
+                    <label for="batataFrita">Batata Frita</label>
+                        <input type="checkbox" id="batataFrita">
+                    <label for="legumes">legumes</label>
+                        <input type="checkbox" id="legumes">
+                    <label for="pure">Purê</label>
+                        <input type="checkbox" id="pure">
+                    <label for="batatPalha">Batata Palha</label>
+                        <input type="checkbox" id="batataPalha">
+                    <label for="salada">Salada</label>
+                        <input type="checkbox" id="salada">
+                </div>
+                <div class="xtra">
+                    <h2>Extras</h2>
+                    <label for="acompanhamentoXtra">Acompanhamento extra</label>
+                        <input type="checkbox" id="acompanhamentoXtra">
+                    <label for="proteinaXtra">Proteína extra</label>
+                        <input type="checkbox" id="proteinaXtra">
+                    <label for="acompanhamentoP">Acompanhamento P</label>
+                        <input type="checkbox" id="acompanhamentoP">
+                    <label for="ovoFrito">Ovo frito</label>
+                        <input type="checkbox" id="ovoFrito">
+                    <label for="acompanhamentoG">Acompanhamento G</label>
+                        <input type="checkbox" id="acompanhamentoG">
+                    <label for="embalagemXtra">Embalagem extra</label>
+                        <input type="checkbox" id="embalagemXtra">
+                </div>
+            </div>
+            </div>
+                <button id="resetButton">Resetar</button> <!-- Botão para resetar -->
+            </div>
+            <button id="chikenClose"> x </button>
+        </dialog>
+        <dialog id="beefModal">
+            <h2>TEST BEEF</h2>
+            <button id="beefClose"> x </button>
+        </dialog>
     </main>
 
 

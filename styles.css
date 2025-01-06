@@ -10,7 +10,7 @@ a{
     --color-2: #383838;
     --color-3: #F6F6F6;
     --stroke-color: #7E7E7E;
-    --color-4: #ffe922;
+    --color-4: #FF870F;
     --color-5: #222;
     --color-6: #a1a1a1;
     --end-color-1: #48484885;
@@ -128,3 +128,4 @@ section h2{
 .figure img{
     width: 100%;
 }
+/* modal */

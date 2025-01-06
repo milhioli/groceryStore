@@ -11,7 +11,7 @@ a{
     --color-3: #F6F6F6;
     --stroke-color: #7E7E7E;
     --color-4: #FF870F;
-    --color-5: #222;
+    --color-5: #222222;
     --color-6: #a1a1a1;
     --end-color-1: #48484885;
     --end-color-1: #A0A0A0;
@@ -129,3 +129,58 @@ section h2{
     width: 100%;
 }
 /* modal */
+#chikenModal{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 5vh 5vh;
+    width: auto;
+    height: auto;
+    background-color: var(--color-5);
+    border: 2px solid var(--stroke-color);
+    border-radius: 20px;
+    color: var(--color-3);
+}
+#chikenModal h2{
+    font-size: 5rem;
+}
+#chikenModal::backdrop{
+    backdrop-filter: blur(15px);
+}
+.descripition{
+    width: 70vh;
+}
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-3);
+    border: 2px solid var(--color-4);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+  input[type="checkbox"]:checked {
+    background-color: var(--color-4);
+    border-color: var(--color-4);
+    position: relative;
+}
+input[type="checkbox"]:checked::before {
+    content: ""; /* Ícone de check */
+    color: var(--color-3);
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    top: 1px;
+    left: 3.5px;
+}
+.modalForm label{
+    margin-bottom: 100px;
+}
+.descripition img{
+    width: 100%;
+}
+.descripition textarea{
+    width: 100%;
+    height: 30%;
+}

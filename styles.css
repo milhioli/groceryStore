@@ -11,8 +11,9 @@ a{
     --color-3: #F6F6F6;
     --stroke-color: #7E7E7E;
     --color-4: #FF870F;
-    --color-5: #222222;
+    --color-5: #222222f1;
     --color-6: #a1a1a1;
+    --color-7: #2c2c2cd7;
     --end-color-1: #48484885;
     --end-color-1: #A0A0A0;
     
@@ -29,6 +30,9 @@ body h1{
 }
 figure{
 
+}
+dialog{
+    display: none;
 }
 /* Header */
 header{
@@ -108,7 +112,7 @@ section h2{
     transform: scale(1.01);
 }
 .card h3{
-    font-size: 9vh;
+    font-size: 7vh;
     margin-top: 0;
     padding-bottom: 0px;
     color: var(--color-4);
@@ -129,23 +133,82 @@ section h2{
     width: 100%;
 }
 /* modal */
-#chikenModal{
+#chickenModal, #meatModal, #omeletModal{
+    display: none;
+}
+#chickenModal[open], #meatModal[open], #omeletModal[open]{
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    margin: 5vh 5vh;
-    width: auto;
-    height: auto;
+    margin: auto;
+    max-width: auto;
+    width: 100%;
+    max-height: auto;
+    height: 100%;
     background-color: var(--color-5);
     border: 2px solid var(--stroke-color);
     border-radius: 20px;
     color: var(--color-3);
 }
-#chikenModal h2{
-    font-size: 5rem;
+#chickenModal h2, #meatModal h2, #omeletModal h2{
+    font-size: 3rem;
+    margin: 20px 0px;
+    /* margin-bottom: 30px; */
+    padding: 15px;
+    border-radius: 3px;
+    color: var(--color-3);
 }
-#chikenModal::backdrop{
-    backdrop-filter: blur(15px);
+#chickenModal::backdrop, #meatModal::backdrop, #omeletModal::backdrop{
+    backdrop-filter: blur(10px);
+}
+.chicken-container, .meat-container, .omelet-container{
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    gap: 25px;
+}
+#chickenModal img, #meatModal img, #omeletModal img{
+    width: auto;
+    margin: 80px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chicken-box, .meat-box, .omelet-box{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 25px;
+    scrollbar-color: var(--color-2) var(--color-1)  ;
+    scrollbar-width: none;
+}
+.form{
+    background-color: var(--color-7);
+    padding: 25px;
+    border-radius: 15px;
+}
+#h2{
+    margin: 0;
+}
+
+
+/* .chicken-box{
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    color: var(--color-3);
+    gap: 50px;
+    max-width: 100%;
+    max-height: 100%;
+} */
+.modalForm{
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 50px;
+    border-left: 1px solid var(--stroke-color);
+    
 }
 .descripition{
     width: 70vh;
@@ -154,33 +217,74 @@ input[type="checkbox"] {
     appearance: none;
     width: 20px;
     height: 20px;
-    background-color: var(--color-3);
-    border: 2px solid var(--color-4);
+    background-color: var(--color-);
+    border: 1px solid var(--stroke-color);
     border-radius: 100%;
     cursor: pointer;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.3s ease-in;
 }
-  input[type="checkbox"]:checked {
-    background-color: var(--color-4);
-    border-color: var(--color-4);
+input[type="checkbox"]:checked {
+    background-color: var(--color-3);
+    border: 5px solid var(--color-4);
     position: relative;
 }
 input[type="checkbox"]:checked::before {
-    content: ""; /* Ícone de check */
+    /* content: ""; */
     color: var(--color-3);
-    font-weight: bold;
+    /* font-weight: bold;
     font-size: 14px;
     position: absolute;
     top: 1px;
-    left: 3.5px;
+    left: 3.5px; */
 }
-.modalForm label{
-    margin-bottom: 100px;
+.description{
+    max-width: 100%;
+    text-align: center;
 }
-.descripition img{
-    width: 100%;
+.select{
+    /* font-size: 1.5rem; */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--stroke-color);
 }
-.descripition textarea{
-    width: 100%;
-    height: 30%;
+.form input, label{
+    text-align: center;
 }
+.description textarea{
+    margin-top: 40px;
+    width: 90%;
+    height: 150px;
+    padding: 10px;
+    background-color: var(--color-5);
+    border-radius: 5px;
+    outline: none;
+    color: var(--color-3);
+    font-size: 1rem;
+}
+#chickenClose, #meatClose, #omeletClose{
+    background-color: transparent;
+    border: none;
+    color: var(--color-4);
+    cursor: pointer;
+    font-size: 2rem;
+}
+@media screen and (max-width: 1400px ) {
+    label{
+        font-size: 1rem;
+    }
+    #chickenModal h2{
+        font-size: 3rem;
+    }
+
+}
+/* .description textarea{
+    /* width: 100%;
+    height: 30%; 
+    padding: 10px;
+    background-color: var(--color-5);
+    border-radius: 5px;
+    outline: none;
+    color: var(--color-3);
+    font-size: 1.2rem;
+} */

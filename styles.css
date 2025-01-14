@@ -112,7 +112,7 @@ section h2{
     transform: scale(1.01);
 }
 .card h3{
-    font-size: 7vh;
+    font-size: 5.8vh;
     margin-top: 0;
     padding-bottom: 0px;
     color: var(--color-4);
@@ -133,10 +133,10 @@ section h2{
     width: 100%;
 }
 /* modal */
-#chickenModal, #meatModal, #omeletModal{
+#chickenModal, #meatModal, #omeletModal, #othersModal{
     display: none;
 }
-#chickenModal[open], #meatModal[open], #omeletModal[open]{
+#chickenModal[open], #meatModal[open], #omeletModal[open], #othersModal[open]{
     display: flex;
     margin: auto;
     max-width: auto;
@@ -148,7 +148,7 @@ section h2{
     border-radius: 20px;
     color: var(--color-3);
 }
-#chickenModal h2, #meatModal h2, #omeletModal h2{
+#chickenModal h2, #meatModal h2, #omeletModal h2, #othersModal h2{
     font-size: 3rem;
     margin: 20px 0px;
     /* margin-bottom: 30px; */
@@ -156,23 +156,23 @@ section h2{
     border-radius: 3px;
     color: var(--color-3);
 }
-#chickenModal::backdrop, #meatModal::backdrop, #omeletModal::backdrop{
+#chickenModal::backdrop, #meatModal::backdrop, #omeletModal::backdrop, #othersModal::backdrop{
     backdrop-filter: blur(10px);
 }
-.chicken-container, .meat-container, .omelet-container{
+.chicken-container, .meat-container, .omelet-container, .others-container{
     width: 100%;
     padding: 25px;
     display: flex;
     gap: 25px;
 }
-#chickenModal img, #meatModal img, #omeletModal img{
+#chickenModal img, #meatModal img, #omeletModal img, #othersModal img{
     width: auto;
     margin: 80px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.chicken-box, .meat-box, .omelet-box{
+.chicken-box, .meat-box, .omelet-box, .others-box{
     display: flex;
     flex-direction: column;
     max-width: 100%;
@@ -251,6 +251,11 @@ input[type="checkbox"]:checked::before {
 .form input, label{
     text-align: center;
 }
+.form:focus{
+    margin: 0;
+    border: none;
+    outline: none;
+}
 .description textarea{
     margin-top: 40px;
     width: 90%;
@@ -262,7 +267,7 @@ input[type="checkbox"]:checked::before {
     color: var(--color-3);
     font-size: 1rem;
 }
-#chickenClose, #meatClose, #omeletClose{
+#chickenClose, #meatClose, #omeletClose, #othersClose{
     background-color: transparent;
     border: none;
     color: var(--color-4);

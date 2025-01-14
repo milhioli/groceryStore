@@ -99,6 +99,39 @@ omeletDialog.addEventListener("click", (event) => {
     }
 });
 
+const othersDialog = document.querySelector("#othersModal");
+const othersOp = document.querySelector("#othersOpen");
+const othersCl = document.querySelector("#othersClose");
+
+othersOp.addEventListener("click", () => {
+    othersDialog.showModal(); {
+        
+    }
+});
+othersCl.addEventListener("click", (e) => {
+    othersDialog.close();
+});
+// Fechar o diálogo ao clicar fora do conteúdo
+othersDialog.addEventListener("click", (event) => {
+    // Verificar se o clique foi fora do conteúdo
+    const rect = othersDialog.getBoundingClientRect();
+    const isOutside =
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom;
+
+    if (isOutside) {
+        othersDialog.close();
+        // Forçar reprocessamento para evitar problemas de renderização
+        setTimeout(() => {
+            othersDialog.style.display = "none"; // Ocultar para garantir
+            othersDialog.offsetHeight; // Trigger reflow
+            othersDialog.style.display = ""; // Restaurar
+        }, 0);
+    }
+});
+
 
 // // chickenCl.addEventListener("click", (e) => {
 // //     chickenDialog.close();

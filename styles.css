@@ -323,10 +323,17 @@ input[type="checkbox"]:checked::before {
     border-radius: 5px;
     width: 100%;
     cursor: pointer;
-    transition: all .4s ease-in;
+    transition: .2s ease-out;
 }
-.add-btn:hover{
-    background: linear-gradient(#FF870F, #fc4700);
+.edge{
+    color: var(--color-3);
+    background-color: #fda706e7;
+    width: fit-content;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid var(--color-3);
+    border-radius: 15px;
+    font-size: 12px;
 }
 
 

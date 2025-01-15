@@ -34,6 +34,9 @@ figure{
 dialog{
     display: none;
 }
+ul{
+    list-style: none;
+}
 /* Header */
 header{
     display: flex;
@@ -275,6 +278,58 @@ input[type="checkbox"]:checked::before {
     cursor: pointer;
     font-size: 2rem;
 }
+/* Card Slider */
+.card-list .card-iten .card-link{
+    width: 300px;
+    display: block;
+    background-color: var(--color-2);
+    border: solid 1px var(--stroke-color);
+    border-radius: 20px;
+    padding: 18px;
+    cursor: auto;
+    transition: .2s ease-out;
+}
+.card-title{
+    margin: ;
+    color: var(--color-3);
+}
+.price{
+    color: var(--color-4);
+    margin: 10px 0px;
+}
+.card-list .card-link .card-img{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card-img{
+    border-radius: 20px;
+}
+.card-link{
+    box-shadow: 0px 0px 20px 1px var(--color-5);
+    margin: 0;
+    padding: 0;
+}
+.card-link:hover{
+    box-shadow: 0px 0px 30px 10px var(--color-5);
+    transform: scale(1.01);
+}
+.add-btn{
+    border: 1px solid var(--color-4);
+    padding: 10px;
+    background: linear-gradient(#FF870F, #f57208);
+    color: var(--color-3);
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: all .4s ease-in;
+}
+.add-btn:hover{
+    background: linear-gradient(#FF870F, #fc4700);
+}
+
+
 @media screen and (max-width: 1400px ) {
     label{
         font-size: 1rem;

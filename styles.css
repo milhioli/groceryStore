@@ -105,7 +105,7 @@ section h2{
     height: 25vh;
     background-color: var(--color-2);
     border-radius: 20px;
-    padding: 70px ;
+    padding: 70px;
     cursor: pointer;
     box-shadow: 0px 0px 20px 1px var(--color-5);
     transition: .2s ease-out;
@@ -212,7 +212,6 @@ section h2{
     justify-content: space-between;
     padding-left: 50px;
     border-left: 1px solid var(--stroke-color);
-    
 }
 .descripition{
     width: 70vh;
@@ -279,25 +278,25 @@ input[type="checkbox"]:checked::before {
     font-size: 2rem;
 }
 /* Card Slider */
-.card-list .card-iten .card-link{
+/* .card-list .card-iten .card-link{
     width: 300px;
     display: block;
     background-color: var(--color-2);
+    padding: 18px;
+}
+
+.card-link{
     border: solid 1px var(--stroke-color);
     border-radius: 20px;
-    padding: 18px;
-    cursor: auto;
-    transition: .2s ease-out;
 }
 .card-title{
-    margin: ;
     color: var(--color-3);
 }
 .price{
     color: var(--color-4);
     margin: 10px 0px;
 }
-.card-list .card-link .card-img{
+.card-list .card-img{
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
@@ -308,13 +307,13 @@ input[type="checkbox"]:checked::before {
 }
 .card-link{
     box-shadow: 0px 0px 20px 1px var(--color-5);
-    margin: 0;
     padding: 0;
+    cursor: grab;
 }
-.card-link:hover{
-    box-shadow: 0px 0px 30px 10px var(--color-5);
-    transform: scale(1.01);
+.card-iten{
+    margin: 0px 50px;
 }
+
 .add-btn{
     border: 1px solid var(--color-4);
     padding: 10px;
@@ -327,7 +326,7 @@ input[type="checkbox"]:checked::before {
 }
 .edge{
     color: var(--color-3);
-    background-color: #fda706e7;
+    background-color: #06fd1b65;
     width: fit-content;
     margin-top: 10px;
     padding: 5px;
@@ -335,6 +334,14 @@ input[type="checkbox"]:checked::before {
     border-radius: 15px;
     font-size: 12px;
 }
+div.swiper-pagination{
+    color: var(--color-4);
+} */
+/* .card-wrapper{
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 7px 0px;
+} */
 
 
 @media screen and (max-width: 1400px ) {

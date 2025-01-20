@@ -11,7 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- Remix icons link --> 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-        rel="stylesheet"/>  
+        rel="stylesheet"/> 
+        <!-- SwiperJS CSS (for sliders) link -->
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      />
     <title>Splendore Bar</title>
 </head>
 <body>
@@ -222,10 +227,10 @@
         </section>
         <section id="drink">
             <h2><img src="img/menor1/Bebidas.png" alt=""></h2>
-            <div class="container">
+            <div class="container swiper" >
                 <div class="card-wrapper">
-                    <ul class="card-list">
-                        <li class="card-iten">
+                    <div class="card-list swiper-wrapper">
+                        <div class="card-iten swiper-slide">
                             <a href="#" class="card-link">
                                 <img src="img/drinks/cola.png" alt="" class="card-img">
                                 <p class="edge">refrigerante</p>
@@ -233,10 +238,8 @@
                                 <p class="price">R$ 20.00</p>
                                 <button class="add-btn">adicionar</button>
                             </a>
-                        </li>
-                    </ul>
-                    <ul class="card-list">
-                        <li class="card-iten">
+                        </div>
+                        <div class="card-iten swiper-slide">
                             <a href="#" class="card-link">
                                 <img src="img/drinks/nana.png" alt="" class="card-img">
                                 <p class="edge">refrigerante</p>
@@ -244,32 +247,29 @@
                                 <p class="price">R$ 20.00</p>
                                 <button class="add-btn">adicionar</button>
                             </a>
-                        </li>
-                    </ul>
-                    <ul class="card-list">
-                        <li class="card-iten">
+                        </div>
+                        <div class="card-iten swiper-slide">
                             <a href="#" class="card-link">
-                                <img src="img/fish.png" alt="" class="card-img">
-                                <h2 class="card-title">Coca Cola 2l</h2>
+                                <img src="img/drinks/cola600.png" alt="" class="card-img">
+                                <p class="edge">refrigerante</p>
+                                <h2 class="card-title">Coca Cola 600ml</h2>
                                 <p class="price">R$ 20.00</p>
                                 <button class="add-btn">adicionar</button>
                             </a>
-                        </li>
-                    </ul>
-                    <ul class="card-list">
-                        <li class="card-iten">
+                        </div>
+                        <div class="card-iten swiper-slide">
                             <a href="#" class="card-link">
-                                <img src="img/drinks/Group 4.png" alt="" class="card-img">
-                                <h2 class="card-title">Coca Cola 2l</h2>
+                                <img src="img/drinks/nana600.png" alt="" class="card-img">
+                                <p class="edge">refrigerante</p>
+                                <h2 class="card-title">Guaraná Antártica</h2>
                                 <p class="price">R$ 20.00</p>
                                 <button class="add-btn">adicionar</button>
                             </a>
-                        </li>
-                    </ul>
-                </div>
-                
+                        </div>
+                    <div/> 
+                </div>   
             </div>
-            
+            <div class="swiper-pagination"></div>
         </section>
         <dialog id="chickenModal" >
             <div class="chicken-container" id="chickenOpen">
@@ -419,7 +419,6 @@
             <div class="chicken-container" id="chickenOpen">
                 
                     <img src="img/images 1 (1).png" alt="">
-                    <button class="add-btn">adicionar</button>
  
                 <div class="chicken-box">
                     <div class="form">
@@ -526,9 +525,6 @@
                                 </label>
                                 <input type="number">
                             </div>
-                        </div>
-                        <div>
-                            <button>oi</button>
                         </div>
                         <div class="description">
                             <textarea name="description" id="" style="resize: none;" rows="none" cols="none" placeholder="Deseja alguma alteração? Escreva aqui"></textarea>
@@ -1000,6 +996,9 @@
 
 
 
+   
+    <!-- Linkin SwiperJs Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

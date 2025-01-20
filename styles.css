@@ -7,7 +7,7 @@ a{
 }
 :root{
     --color-1: #333;
-    --color-2: #383838;
+    --color-2: #3a3a3a;
     --color-3: #F6F6F6;
     --stroke-color: #7E7E7E;
     --color-4: #FF870F;
@@ -26,340 +26,68 @@ body h1{
     font-family: "Imperial Script", serif;
     font-weight: 400;
     font-style: normal;
-      
 }
-figure{
+main{
+    margin: 0 10px;
+}
 
-}
-dialog{
-    display: none;
-}
-ul{
-    list-style: none;
-}
 /* Header */
 header{
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 50px;
-    align-items: center;
+    width: 100%;
     height: 15vh;
-    border-bottom: 1px solid var(--color-5);
-    color: var(--color-3);
+    border-bottom: 1px solid var(--stroke-color);
+    display: flex;
 }
 header h1{
-    font-size: 5rem;
-    cursor: pointer;
-}
-#home{
-    padding: 0;
-}
-header a{
     color: var(--color-3);
-    padding-left: 25px;
-    font-size: 1.2rem;
-    transition: all .5s;
-}
-nav a{
-    transition: all .2s;
-    display: inline-block;
-}
-nav a:hover{
-    color: var(--color-6);
-    
-}
-nav a:focus{
-    color: var(--color-6);
-    transform: translateY(2px);
-}
-.forUser a{
-    display: inline-block;
-}
-.forUser a:hover{
-    transform: translateY(-2px);
-    color: var(--color-4);
-
-}
-/* Sections */
-section{
-    margin: 25px 50px;
-}
-section h2{
-    margin: 25px 0px;
+    font-size: 3.5rem;
+    margin: 0 auto;
 }
 /* Cards */
-.broke{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-    /* separa os cards */
-    gap: 50px;
+.title{
+    color: var(--color-3);
+    font-size: 3.2rem;
 }
 .card{
     display: flex;
-    justify-content: space-between;
-    align-items:  inherit;
-    border: solid 1px var(--stroke-color);
-    /* Faz com que os cards fiquem 100% nos limites */
-    width: 100%;
-    height: 25vh;
+    height: 100px;
+    margin-bottom: 10px;
     background-color: var(--color-2);
-    border-radius: 20px;
-    padding: 70px;
-    cursor: pointer;
     box-shadow: 0px 0px 20px 1px var(--color-5);
-    transition: .2s ease-out;
-}
-.card:hover{
-    box-shadow: 0px 0px 30px 10px var(--color-5);
-    transform: scale(1.01);
-}
-.card h3{
-    font-size: 5.8vh;
-    margin-top: 0;
-    padding-bottom: 0px;
-    color: var(--color-4);
-    font-weight: 300;
-    transition: .2s ease-out;
-}
-
-.card-info p{
-    color: var(--color-3);
-    font-weight: 100;
-}
-.figure{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.figure img{
-    width: 100%;
-}
-/* modal */
-#chickenModal, #meatModal, #omeletModal, #othersModal{
-    display: none;
-}
-#chickenModal[open], #meatModal[open], #omeletModal[open], #othersModal[open]{
-    display: flex;
-    margin: auto;
-    max-width: auto;
-    width: 100%;
-    /* padding: 50px; */
-    max-height: auto;
-    height: 100%;
-    background-color: var(--color-5);
-    border: 2px solid var(--stroke-color);
-    border-radius: 20px;
-    color: var(--color-3);
-}
-#chickenModal h2, #meatModal h2, #omeletModal h2, #othersModal h2{
-    font-size: 3rem;
-    margin: 20px 0px;
-    /* margin-bottom: 30px; */
-    padding: 15px;
-    border-radius: 3px;
-    color: var(--color-3);
-}
-#chickenModal::backdrop, #meatModal::backdrop, #omeletModal::backdrop, #othersModal::backdrop{
-    backdrop-filter: blur(10px);
-}
-.chicken-container, .meat-container, .omelet-container, .others-container{
-    width: 100%;
-    padding: 25px;
-    display: flex;
+    border-bottom: 1.5px solid var(--stroke-color);
+    border-radius: 4px;
+    padding: 10px;
     gap: 25px;
 }
-#chickenModal img, #meatModal img, #omeletModal img, #othersModal img{
-    width: auto;
-    margin: 100px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.chicken-box, .meat-box, .omelet-box, .others-box{
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    width: 100%;
-    overflow-y: scroll;
-    padding: 0px;
-    scrollbar-color: var(--color-2) var(--color-1)  ;
-    scrollbar-width: none;
-}
-.form{
-    background-color: var(--color-7);
-    padding: 25px;
-    border-radius: 15px;
-}
-#h2{
-    margin: 0;
-}
-
-
-/* .chicken-box{
-    margin: 20px;
-    display: flex;
-    justify-content: space-around;
+.card .contents-card .price{
     color: var(--color-3);
-    gap: 50px;
-    max-width: 100%;
-    max-height: 100%;
-} */
-.modalForm{
-    margin-bottom: 5vh;
+    font-size: 0.8rem;
+}
+.card h2{
+    color: var(--color-4);
+    font-size: 1.7rem;
+}
+.card .contents-card{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 50px;
-    border-left: 1px solid var(--stroke-color);
 }
-.descripition{
-    width: 70vh;
-}
-input[type="checkbox"] {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background-color: var(--color-);
-    border: 1px solid var(--stroke-color);
-    border-radius: 100%;
-    cursor: pointer;
-    transition: all 0.3s ease-in;
-}
-input[type="checkbox"]:checked {
-    background-color: var(--color-3);
-    border: 5px solid var(--color-4);
-    position: relative;
-}
-input[type="checkbox"]:checked::before {
-    /* content: ""; */
-    color: var(--color-3);
-    /* font-weight: bold;
-    font-size: 14px;
-    position: absolute;
-    top: 1px;
-    left: 3.5px; */
-}
-.description{
-    max-width: 100%;
-    text-align: center;
-}
-.select{
-    /* font-size: 1.5rem; */
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--stroke-color);
-}
-.form input, label{
-    text-align: center;
-}
-.form:focus{
-    margin: 0;
-    border: none;
-    outline: none;
-}
-.description textarea{
-    margin-top: 40px;
-    width: 90%;
-    height: 150px;
-    padding: 10px;
-    background-color: var(--color-5);
-    border-radius: 5px;
-    outline: none;
-    color: var(--color-3);
-    font-size: 1rem;
-}
-#chickenClose, #meatClose, #omeletClose, #othersClose{
-    background-color: transparent;
-    border: none;
-    color: var(--color-4);
-    cursor: pointer;
-    font-size: 2rem;
-}
-/* Card Slider */
-/* .card-list .card-iten .card-link{
-    width: 300px;
-    display: block;
-    background-color: var(--color-2);
-    padding: 18px;
+.card figure img{
+    height: 100%;
 }
 
-.card-link{
-    border: solid 1px var(--stroke-color);
-    border-radius: 20px;
-}
-.card-title{
-    color: var(--color-3);
-}
-.price{
-    color: var(--color-4);
-    margin: 10px 0px;
-}
-.card-list .card-img{
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 10px;
-}
-.card-img{
-    border-radius: 20px;
-}
-.card-link{
-    box-shadow: 0px 0px 20px 1px var(--color-5);
-    padding: 0;
-    cursor: grab;
-}
-.card-iten{
-    margin: 0px 50px;
+/* Dialog */
+
+dialog img{
+    display: none;
 }
 
-.add-btn{
-    border: 1px solid var(--color-4);
-    padding: 10px;
-    background: linear-gradient(#FF870F, #f57208);
-    color: var(--color-3);
-    border-radius: 5px;
-    width: 100%;
-    cursor: pointer;
-    transition: .2s ease-out;
+dialog::backdrop{
+    backdrop-filter: blur(10px)
 }
-.edge{
-    color: var(--color-3);
-    background-color: #06fd1b65;
+
+dialog{
     width: fit-content;
-    margin-top: 10px;
-    padding: 5px;
-    border: 1px solid var(--color-3);
-    border-radius: 15px;
-    font-size: 12px;
+    display: flex;
+    margin: auto;
 }
-div.swiper-pagination{
-    color: var(--color-4);
-} */
-/* .card-wrapper{
-    overflow: hidden;
-    max-width: 1200px;
-    margin: 0 7px 0px;
-} */
-
-
-@media screen and (max-width: 1400px ) {
-    label{
-        font-size: 1rem;
-    }
-    #chickenModal h2{
-        font-size: 3rem;
-    }
-
-}
-/* .description textarea{
-    /* width: 100%;
-    height: 30%; 
-    padding: 10px;
-    background-color: var(--color-5);
-    border-radius: 5px;
-    outline: none;
-    color: var(--color-3);
-    font-size: 1.2rem;
-} */

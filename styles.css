@@ -4,6 +4,10 @@
 }
 a{
     text-decoration: none;
+    cursor: auto;
+}
+button{
+    border: none;
 }
 :root{
     --color-1: #333;
@@ -63,16 +67,13 @@ header h1{
     padding: 10px;
     gap: 25px;
 }
-.card .contents-card .price{
+.price{
     color: var(--color-8);
-    font-size: 0.8rem;
-}
-.card .contents-card .price span{
-    color: var(--color-5);
+    font-size: 0.5rem;
 }
 .card h2{
     color: var(--color-4);
-    font-size: 1.7rem;
+    font-size: 1rem;
 }
 .card .contents-card{
     display: flex;
@@ -98,28 +99,73 @@ dialog[open]{
     display: flex;
     margin: auto;
 }
-
+/* Bottom tool */
 .bottom-tool{
     height: 50px;
     position: fixed;
-    bottom: 0;
-    left: 0; /* Garantir que o elemento comece no canto esquerdo */
-    width: 100vw; /* Usar 100vw para ocupar a largura total da janela */
+    bottom: 0; /* Usar 100vw para ocupar a largura total da janela */
+    right: 0;
     background-color: var(--color-9);
     border-top: 1px solid var(--stroke-color);
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0 15px;
-    box-sizing: border-box; /* Inclui padding na largura total */
+    
 }
-.menu-icons a{
+.btn-href {
     color: var(--color-3);
-    font-size: 1.2rem;
-    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
 }
+
+.btn-href.active {
+    color: var(--color-4); /* Destaque para o botão ativo */
+    transform: scale(1.2); /* Aumentar levemente o botão ativo */
+}
+
 .menu-icons{
     margin: 0 auto;
+}
+/* Slider */
+.card-item {
+    width: 200px;
+    padding: 10px;
+    background-color: var(--color-2);
+    border-bottom: 1.5px solid var(--stroke-color);
+    border-radius: 5px;
+    
+}
+
+.card-item img{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 5px;
+    
+}
+.edge{
+    margin-top: 5px;
+    width: fit-content;
+    background-color: var(--color-7);
+    color: #FF870F;
+    padding: 5px;
+    border: 1px solid var(--stroke-color);
+    border-radius: 5px;
+    font-size: 0.5rem;
+}
+.slider-title{
+    color: var(--color-3);
+    font-size: 0.9rem;
+}
+.container{
+    height: 15rem;
+}
+.add-btn{
+    width: 100%;
+    color: var(--color-3);
+    background-color: var(--color-4);
+    border-radius: 4px;
+    font-size: 0.5rem;
+    height: 20px;
 }

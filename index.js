@@ -1,38 +1,13 @@
-const swiper = new Swiper('.card-wrapper', {
-    loop: true,
-    grabCursor: true,
-
+var splide = new Splide( '.splide', {
+    type   : 'loop',
+    padding: '1rem',
+    perPage: 1,
+    arrows: false,
+    autoplay:true,
+    gap : 10,
+  } );
   
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      dynamicBullets: true,
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-
-    breakpoints: {
-        0: {
-            slidesPerView:1
-        },
-        620: {
-            slidesPerView:2
-        },
-        1024: {
-            slidesPerView:3
-        }
-    }
-  });
+  splide.mount();
 
 
   const chickenDialog = document.querySelector("#chickenModal");
@@ -68,6 +43,69 @@ const swiper = new Swiper('.card-wrapper', {
           chickenDialog.close();
       }
   });
+
+  // Selecionar todos os botões e as seções correspondentes
+const menuButtons = document.querySelectorAll('.btn-href');
+const sections = document.querySelectorAll('.content');
+
+function highlightButtonOnScroll() {
+    sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const button = document.querySelector(`a[href="#${section.id}"]`);
+
+        // Calcular a metade da altura da seção
+        const sectionMiddle = rect.top + rect.height / 2;
+
+        // Verificar se a metade da seção está visível no viewport
+        if (sectionMiddle >= 0 && sectionMiddle <= window.innerHeight) {
+            menuButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        }
+    });
+}
+
+// Função para ativar o botão ao clicar
+menuButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault(); // Evitar o comportamento padrão de rolagem
+        const targetId = button.getAttribute('href').slice(1); // Pegar ID do destino
+        const targetSection = document.getElementById(targetId);
+
+        // Rolar suavemente até a seção
+        targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+
+        // Atualizar o botão ativo
+        menuButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+    });
+});
+
+let isScrolling;
+window.addEventListener('scroll', () => {
+    clearTimeout(isScrolling);
+    isScrolling = setTimeout(() => {
+        highlightButtonOnScroll();
+    }, 100); // Ajustar o tempo de debounce conforme necessário
+});
+
+
+// Escutar o evento de rolagem
+window.addEventListener('scroll', highlightButtonOnScroll);
+
+
+// Escutar o evento de rolagem
+window.addEventListener('scroll', highlightButtonOnScroll);
+
+
+// Escutar o evento de rolagem
+window.addEventListener('scroll', highlightButtonOnScroll);
+
+
+// Escutar o evento de rolagem
+window.addEventListener('scroll', highlightButtonOnScroll);
 
 // const meatDialog = document.querySelector("#meatModal");
 // const meatOp = document.querySelector("#meatOpen");

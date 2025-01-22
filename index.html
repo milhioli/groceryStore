@@ -13,10 +13,8 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
         rel="stylesheet"/> 
         <!-- SwiperJS CSS (for sliders) link -->
-        <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-      />
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" 
+    rel="stylesheet">
 
       <link rel='stylesheet' 
       href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
@@ -34,10 +32,10 @@
     </header>
 
     <main>
-        <div class="lunch">
-            <h2 class="title" id="lunch">
+        <section class="content" id="lunch">
+            <h2 class="title">
                 Almoço
-            </h1>
+            </h2>
             <div class="card-container">
                 <div class="card" id="chickenOpen">
                     <figure> <img src="img/chiken.png" alt=""></figure>
@@ -84,17 +82,74 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <section class="bottom-tool">
-            <div class="menu-icons">
-                <a href="#lunch"><i class="fi fi-ss-room-service"></i></a>
-                <a href="#drink"><i class="fi fi-ss-cup-straw-swoosh"></i></a>
-                <a href="#junk"><i class="fi fi-ss-burger-fries"></i></a>
-                <a href="#finger-food"><i class="fi fi-sc-steak"></i></a>
+        </section>
+
+        <section class="content" id="drink" >
+            <h2 class="title">
+                Bebidas
+            </h2>
+            <div class="container splide">
+                <div class="wrapper splide__track">
+                    <ul class="card-list splide__list">
+                        <li class="card-item splide__slide">
+                            <a href="#">
+                                <img src="img/drinks/cola.png" alt="Imagem do refrigerante Coca Cola">
+                                <p class="edge">refrigerantes</p>
+                                <h2 class="slider-title">Coca Cola 1L</h2>
+                                <p class="price">R$10,00</p>
+                                <button class="add-btn">adicionar</button>
+                            </a>
+                        </li>
+                        <li class="card-item splide__slide">
+                            <a href="#">
+                                <img src="img/drinks/cola.png" alt="Imagem do refrigerante Coca Cola">
+                                <p class="edge">refrigerantes</p>
+                                <h2 class="slider-title">Coca Cola 1L</h2>
+                                <p class="price">R$10,00</p>
+                                <button class="add-btn">adicionar</button>
+                            </a>
+                        </li>
+                        <li class="card-item splide__slide">
+                            <a href="#">
+                                <img src="img/drinks/cola.png" alt="Imagem do refrigerante Coca Cola">
+                                <p class="edge">refrigerantes</p>
+                                <h2 class="slider-title">Coca Cola 1L</h2>
+                                <p class="price">R$10,00</p>
+                                <button class="add-btn">adicionar</button>
+                            </a>
+                        </li>
+                        <li class="card-item splide__slide">
+                            <a href="#">
+                                <img src="img/drinks/cola.png" alt="Imagem do refrigerante Coca Cola">
+                                <p class="edge">refrigerantes</p>
+                                <h2 class="slider-title">Coca Cola 1L</h2>
+                                <p class="price">R$10,00</p>
+                                <button class="add-btn">adicionar</button>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+    
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
             </div>
-            
+        </section>
+        
+    </main>
+    
+    
+    <section class="bottom-tool">
+        <div class="menu-icons">
+            <a href="#lunch" id="btn-lunch" class="btn-href"><i class="fi fi-ss-room-service"></i></a>
+            <a href="#drink" id="btn-drink" class="btn-href"><i class="fi fi-ss-cup-straw-swoosh"></i></a>
+            <a href="#junk" id="btn-junk" class="btn-href"><i class="fi fi-ss-burger-fries"></i></a>
+            <a href="#finger-food" id="btn-finger" class="btn-href"><i class="fi fi-sc-steak"></i></a>
+        </div>
     </section>
+    
 
     <dialog id="chickenModal" >
         <div class="chicken-container" id="chickenOpen">
@@ -250,7 +305,7 @@
         
     </dialog>
     <!-- Linkin SwiperJs Script -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

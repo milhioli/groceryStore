@@ -16,6 +16,8 @@ a{
     --color-7: #2c2c2cd7;
     --end-color-1: #48484885;
     --end-color-1: #A0A0A0;
+    --color-8: #23d400;
+    --color-9: #222;
     
 }
 body{
@@ -37,6 +39,7 @@ header{
     height: 15vh;
     border-bottom: 1px solid var(--stroke-color);
     display: flex;
+    
 }
 header h1{
     color: var(--color-3);
@@ -60,8 +63,11 @@ header h1{
     gap: 25px;
 }
 .card .contents-card .price{
-    color: var(--color-3);
+    color: var(--color-8);
     font-size: 0.8rem;
+}
+.card .contents-card .price span{
+    color: var(--color-5);
 }
 .card h2{
     color: var(--color-4);
@@ -83,11 +89,36 @@ dialog[open] img{
 }
 
 dialog[open]::backdrop{
-    backdrop-filter: blur(10px)
+    backdrop-filter: blur(2px)
 }
 
 dialog[open]{
     width: fit-content;
     display: flex;
     margin: auto;
+}
+
+.bottom-tool{
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Garantir que o elemento comece no canto esquerdo */
+    width: 100vw; /* Usar 100vw para ocupar a largura total da janela */
+    background-color: var(--color-9);
+    border-top: 1px solid var(--stroke-color);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+.menu-icons a{
+    color: var(--color-3);
+    font-size: 1.2rem;
+    margin: 0 10px;
+}
+.menu-icons{
+    margin: 0 auto;
 }

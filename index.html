@@ -17,6 +17,15 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
       />
+
+      <link rel='stylesheet' 
+      href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+      <link rel='stylesheet' 
+      href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+      <link rel='stylesheet' 
+      href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+      <link rel='stylesheet' 
+      href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-chubby/css/uicons-solid-chubby.css'>
     <title>Splendore Bar</title>
 </head>
 <body>
@@ -26,7 +35,7 @@
 
     <main>
         <div class="lunch">
-            <h2 class="title">
+            <h2 class="title" id="lunch">
                 Almoço
             </h1>
             <div class="card-container">
@@ -37,7 +46,7 @@
                             Frango
                         </h2>
                         <p class="price">
-                            R$22,00 ou R$18,00
+                            R$22,00 | R$18,00
                         </p>
                     </div>
                 </div>
@@ -48,7 +57,7 @@
                             Carne
                         </h2>
                         <p class="price">
-                            R$22,00 ou R$18,00
+                            R$22,00 | R$18,00
                         </p>
                     </div>
                 </div>
@@ -59,7 +68,7 @@
                             Omelete
                         </h2>
                         <p class="price">
-                            R$22,00 ou R$18,00
+                            R$22,00 | R$18,00
                         </p>
                     </div>
                 </div>
@@ -70,160 +79,176 @@
                             Outros
                         </h2>
                         <p class="price">
-                            R$22,00 ou R$18,00
+                            R$22,00 | R$18,00
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <dialog id="chickenModal" >
-            <div class="chicken-container" id="chickenOpen">
-                
-                    <img src="img/images 1 (1).png" alt="">
- 
-                <div class="chicken-box">
-                    <div class="form">
-                        <div><button id="chickenClose"><i class="ri-close-large-fill"></i></button></div>
-                        <div id="chicken-form">
-                            <h2 id="h2">Frango</h2>
-                            <div class="select">
-                            <label for="grelhado">
-                                Grelhado 
-                            </label>
-                                <input type="checkbox">
-                            </div>
-                            <div class="select">
-                                <label for="milanesa">
-                                    À milanesa 
-                                </label>
-                                <input type="checkbox">
-                            </div>
-                            <div class="select">
-                                <label for="parmegiana">
-                                    À parmegiana 
-                                </label>
-                                <input type="checkbox">
-                        </div>
-                        <div id="side-dishes-form">
-                            <h2>Acompanhamentos</h2>
-                            <div class="select">
-                                <label for="salada">
-                                    Salada
-                                </label>
-                                <input type="checkbox">
-                            </div>
-                                <div class="select">
-                                <label for="arroz">
-                                    Arroz 
-                                </label>
-                                    <input type="checkbox">
-                                </div>
-                                <div class="select">
-                                    <label for="macarrao">
-                                        Macarrão 
-                                    </label>
-                                    <input type="checkbox">
-                                </div>
-                                <div class="select">
-                                    <label for="feijao">
-                                        Feijão
-                                    </label>
-                                    <input type="checkbox">
-                                </div>
-                                <div class="select">
-                                    <label for="legume">
-                                        Legume
-                                    </label>
-                                    <input type="checkbox">
-                                </div>
-                                <div class="select">
-                                    <label for="farofa">
-                                        farofa
-                                    </label>
-                                    <input type="checkbox">
-                                </div>
-                                <div class="select">
-                                    <label for="pure">
-                                        Purê
-                                    </label>
-                                    <input type="checkbox">
-                                </div>
-                                <div class="select">
-                                    <label for="batat-frita">
-                                        Batata frita
-                                    </label>
-                                    <input type="checkbox">
-                                </div>
-                                <div class="select">
-                                    <label for="batata-palha">
-                                        Batata palha
-                                    </label>
-                                    <input type="checkbox">
-                                </div>
-                        </div>
-                        <div id="xtra">
-                            <h2>+ Proteína</h2>
-                            <div class="select">
-                            <label for="frango-grelhado">
-                                Frango grelhado
-                            </label>
-                                <input type="number">
-                            </div>
-                            <div class="select">
-                                <label for="frango-milanesa">
-                                    Frango à milanesa 
-                                </label>
-                                <input type="number">
-                            </div>
-                            <div class="select">
-                                <label for="frango-parmegiana">
-                                    Frango à parmegiana 
-                                </label>
-                                <input type="number">
-                            </div>
-                            <div class="select">
-                                <label for="bife-acebolado">
-                                    Bife acebolado 
-                                </label>
-                                    <input type="number">
-                                </div>
-                                <div class="select">
-                                    <label for="bife-cavalo">
-                                        Bife à cavalo 
-                                    </label>
-                                        <input type="number">
-                                    </div>
-                                <div class="select">
-                                    <label for="bife-milanesa">
-                                        Bife à milanesa 
-                                    </label>
-                                    <input type="number">
-                                </div>
-                                <div class="select">
-                                    <label for="bife-parmegiana">
-                                        Bife à parmegiana
-                                    </label>
-                                    <input type="number">
-                            </div>
-                            <div class="select">
-                                <label for="ovo">
-                                    Ovo 
-                                </label>
-                                <input type="number">
-                            </div>
-                        </div>
-                        <div class="description">
-                            <textarea name="description" id="" style="resize: none;" rows="none" cols="none" placeholder="Deseja alguma alteração? Escreva aqui"></textarea>
-                        </div>
-                    </div>
-                </div>
-                
+    </main>
+    <section class="bottom-tool">
+            <div class="menu-icons">
+                <a href="#lunch"><i class="fi fi-ss-room-service"></i></a>
+                <a href="#drink"><i class="fi fi-ss-cup-straw-swoosh"></i></a>
+                <a href="#junk"><i class="fi fi-ss-burger-fries"></i></a>
+                <a href="#finger-food"><i class="fi fi-sc-steak"></i></a>
             </div>
             
-        </dialog>
-    
-    </main>
+    </section>
+
+    <dialog id="chickenModal" >
+        <div class="chicken-container" id="chickenOpen">
+            
+                <img src="img/images 1 (1).png" alt="">
+
+            <div class="chicken-box">
+                <div class="form">
+                    <div><button id="chickenClose"><i class="ri-close-large-fill"></i></button></div>
+                    <div id="chicken-form">
+                        <div class="size">
+                            <h2>Escolha</h2>
+                            <p class="dscrptn">obrigatório</p>
+                            <label for="normal">Padrão</label>
+                            <input type="checkbox">
+                            <label for="kids">Kids</label>
+                            <input type="checkbox">
+                        </div>
+                        <h2 id="h2">Frango</h2>
+                        <div class="select">
+                        <label for="grelhado">
+                            Grelhado 
+                        </label>
+                            <input type="checkbox">
+                        </div>
+                        <div class="select">
+                            <label for="milanesa">
+                                À milanesa 
+                            </label>
+                            <input type="checkbox">
+                        </div>
+                        <div class="select">
+                            <label for="parmegiana">
+                                À parmegiana 
+                            </label>
+                            <input type="checkbox">
+                    </div>
+                    <div id="side-dishes-form">
+                        <h2>Acompanhamentos</h2>
+                        <div class="select">
+                            <label for="salada">
+                                Salada
+                            </label>
+                            <input type="checkbox">
+                        </div>
+                            <div class="select">
+                            <label for="arroz">
+                                Arroz 
+                            </label>
+                                <input type="checkbox">
+                            </div>
+                            <div class="select">
+                                <label for="macarrao">
+                                    Macarrão 
+                                </label>
+                                <input type="checkbox">
+                            </div>
+                            <div class="select">
+                                <label for="feijao">
+                                    Feijão
+                                </label>
+                                <input type="checkbox">
+                            </div>
+                            <div class="select">
+                                <label for="legume">
+                                    Legume
+                                </label>
+                                <input type="checkbox">
+                            </div>
+                            <div class="select">
+                                <label for="farofa">
+                                    farofa
+                                </label>
+                                <input type="checkbox">
+                            </div>
+                            <div class="select">
+                                <label for="pure">
+                                    Purê
+                                </label>
+                                <input type="checkbox">
+                            </div>
+                            <div class="select">
+                                <label for="batat-frita">
+                                    Batata frita
+                                </label>
+                                <input type="checkbox">
+                            </div>
+                            <div class="select">
+                                <label for="batata-palha">
+                                    Batata palha
+                                </label>
+                                <input type="checkbox">
+                            </div>
+                    </div>
+                    <div id="xtra">
+                        <h2>+ Proteína</h2>
+                        <div class="select">
+                        <label for="frango-grelhado">
+                            Frango grelhado
+                        </label>
+                            <input type="number">
+                        </div>
+                        <div class="select">
+                            <label for="frango-milanesa">
+                                Frango à milanesa 
+                            </label>
+                            <input type="number">
+                        </div>
+                        <div class="select">
+                            <label for="frango-parmegiana">
+                                Frango à parmegiana 
+                            </label>
+                            <input type="number">
+                        </div>
+                        <div class="select">
+                            <label for="bife-acebolado">
+                                Bife acebolado 
+                            </label>
+                                <input type="number">
+                            </div>
+                            <div class="select">
+                                <label for="bife-cavalo">
+                                    Bife à cavalo 
+                                </label>
+                                    <input type="number">
+                                </div>
+                            <div class="select">
+                                <label for="bife-milanesa">
+                                    Bife à milanesa 
+                                </label>
+                                <input type="number">
+                            </div>
+                            <div class="select">
+                                <label for="bife-parmegiana">
+                                    Bife à parmegiana
+                                </label>
+                                <input type="number">
+                        </div>
+                        <div class="select">
+                            <label for="ovo">
+                                Ovo 
+                            </label>
+                            <input type="number">
+                        </div>
+                    </div>
+                    <div class="description">
+                        <textarea name="description" id="" style="resize: none;" rows="none" cols="none" placeholder="Deseja alguma alteração? Escreva aqui"></textarea>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </dialog>
     <!-- Linkin SwiperJs Script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="index.js"></script>

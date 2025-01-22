@@ -78,15 +78,15 @@ header h1{
 
 /* Dialog */
 
-dialog img{
+dialog[open] img{
     display: none;
 }
 
-dialog::backdrop{
+dialog[open]::backdrop{
     backdrop-filter: blur(10px)
 }
 
-dialog{
+dialog[open]{
     width: fit-content;
     display: flex;
     margin: auto;

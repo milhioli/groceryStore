@@ -35,139 +35,138 @@ const swiper = new Swiper('.card-wrapper', {
   });
 
 
-const chickenDialog = document.querySelector("#chickenModal");
-const chickenOp = document.querySelector("#chickenOpen");
-const chickenCl = document.querySelector("#chickenClose");
+  const chickenDialog = document.querySelector("#chickenModal");
+  const chickenOp = document.querySelector("#chickenOpen");
+  const chickenCl = document.querySelector("#chickenClose");
+  
+  // Abrir o diálogo
+  chickenOp.addEventListener("click", () => {
+      chickenDialog.showModal();
+  });
+  
+  // Fechar o diálogo ao clicar no botão de fechamento
+  chickenCl.addEventListener("click", () => {
+      chickenDialog.close();
+      // Forçar reprocessamento do HTML para evitar problemas de renderização
+      setTimeout(() => {
+          chickenDialog.style.display = "none"; // Ocultar
+          chickenDialog.offsetHeight; // Trigger reflow
+          chickenDialog.style.display = ""; // Restaurar
+      }, 0);
+  });
+  
+  // Fechar o diálogo ao clicar fora do conteúdo
+  chickenDialog.addEventListener("click", (event) => {
+      const rect = chickenDialog.getBoundingClientRect();
+      const isOutside =
+          event.clientX < rect.left ||
+          event.clientX > rect.right ||
+          event.clientY < rect.top ||
+          event.clientY > rect.bottom;
+  
+      if (isOutside) {
+          chickenDialog.close();
+      }
+  });
 
+// const meatDialog = document.querySelector("#meatModal");
+// const meatOp = document.querySelector("#meatOpen");
+// const meatCl = document.querySelector("#meatClose");
 
-// Abrir o diálogo
-chickenOp.addEventListener("click", () => {
-    chickenDialog.showModal(); {
+// meatOp.addEventListener("click", () => {
+//     meatDialog.showModal(); {
         
-    }
-});
-chickenCl.addEventListener("click", (e) => {
-    chickenDialog.close();
-});
-// Fechar o diálogo ao clicar fora do conteúdo
-chickenDialog.addEventListener("click", (event) => {
-    // Verificar se o clique foi fora do conteúdo
-    const rect = chickenDialog.getBoundingClientRect();
-    const isOutside =
-        event.clientX < rect.left ||
-        event.clientX > rect.right ||
-        event.clientY < rect.top ||
-        event.clientY > rect.bottom;
+//     }
+// });
+// meatCl.addEventListener("click", (e) => {
+//     meatDialog.close();
+// });
+// // Fechar o diálogo ao clicar fora do conteúdo
+// meatDialog.addEventListener("click", (event) => {
+//     // Verificar se o clique foi fora do conteúdo
+//     const rect = meatDialog.getBoundingClientRect();
+//     const isOutside =
+//         event.clientX < rect.left ||
+//         event.clientX > rect.right ||
+//         event.clientY < rect.top ||
+//         event.clientY > rect.bottom;
 
-    if (isOutside) {
-        chickenDialog.close();
-        // Forçar reprocessamento para evitar problemas de renderização
-        setTimeout(() => {
-            chickenDialog.style.display = "none"; // Ocultar para garantir
-            chickenDialog.offsetHeight; // Trigger reflow
-            chickenDialog.style.display = ""; // Restaurar
-        }, 0);
-    }
-});
+//     if (isOutside) {
+//         meatDialog.close();
+//         // Forçar reprocessamento para evitar problemas de renderização
+//         setTimeout(() => {
+//             meatDialog.style.display = "none"; // Ocultar para garantir
+//             meatDialog.offsetHeight; // Trigger reflow
+//             meatDialog.style.display = ""; // Restaurar
+//         }, 0);
+//     }
+// });
 
-const meatDialog = document.querySelector("#meatModal");
-const meatOp = document.querySelector("#meatOpen");
-const meatCl = document.querySelector("#meatClose");
+// const omeletDialog = document.querySelector("#omeletModal");
+// const omeletOp = document.querySelector("#omeletOpen");
+// const omeletCl = document.querySelector("#omeletClose");
 
-meatOp.addEventListener("click", () => {
-    meatDialog.showModal(); {
+// omeletOp.addEventListener("click", () => {
+//     omeletDialog.showModal(); {
         
-    }
-});
-meatCl.addEventListener("click", (e) => {
-    meatDialog.close();
-});
-// Fechar o diálogo ao clicar fora do conteúdo
-meatDialog.addEventListener("click", (event) => {
-    // Verificar se o clique foi fora do conteúdo
-    const rect = meatDialog.getBoundingClientRect();
-    const isOutside =
-        event.clientX < rect.left ||
-        event.clientX > rect.right ||
-        event.clientY < rect.top ||
-        event.clientY > rect.bottom;
+//     }
+// });
+// omeletCl.addEventListener("click", (e) => {
+//     omeletDialog.close();
+// });
+// // Fechar o diálogo ao clicar fora do conteúdo
+// omeletDialog.addEventListener("click", (event) => {
+//     // Verificar se o clique foi fora do conteúdo
+//     const rect = omeletDialog.getBoundingClientRect();
+//     const isOutside =
+//         event.clientX < rect.left ||
+//         event.clientX > rect.right ||
+//         event.clientY < rect.top ||
+//         event.clientY > rect.bottom;
 
-    if (isOutside) {
-        meatDialog.close();
-        // Forçar reprocessamento para evitar problemas de renderização
-        setTimeout(() => {
-            meatDialog.style.display = "none"; // Ocultar para garantir
-            meatDialog.offsetHeight; // Trigger reflow
-            meatDialog.style.display = ""; // Restaurar
-        }, 0);
-    }
-});
+//     if (isOutside) {
+//         omeletDialog.close();
+//         // Forçar reprocessamento para evitar problemas de renderização
+//         setTimeout(() => {
+//             omeletDialog.style.display = "none"; // Ocultar para garantir
+//             omeletDialog.offsetHeight; // Trigger reflow
+//             omeletDialog.style.display = ""; // Restaurar
+//         }, 0);
+//     }
+// });
 
-const omeletDialog = document.querySelector("#omeletModal");
-const omeletOp = document.querySelector("#omeletOpen");
-const omeletCl = document.querySelector("#omeletClose");
+// const othersDialog = document.querySelector("#othersModal");
+// const othersOp = document.querySelector("#othersOpen");
+// const othersCl = document.querySelector("#othersClose");
 
-omeletOp.addEventListener("click", () => {
-    omeletDialog.showModal(); {
+// othersOp.addEventListener("click", () => {
+//     othersDialog.showModal(); {
         
-    }
-});
-omeletCl.addEventListener("click", (e) => {
-    omeletDialog.close();
-});
-// Fechar o diálogo ao clicar fora do conteúdo
-omeletDialog.addEventListener("click", (event) => {
-    // Verificar se o clique foi fora do conteúdo
-    const rect = omeletDialog.getBoundingClientRect();
-    const isOutside =
-        event.clientX < rect.left ||
-        event.clientX > rect.right ||
-        event.clientY < rect.top ||
-        event.clientY > rect.bottom;
+//     }
+// });
+// othersCl.addEventListener("click", (e) => {
+//     othersDialog.close();
+// });
+// // Fechar o diálogo ao clicar fora do conteúdo
+// othersDialog.addEventListener("click", (event) => {
+//     // Verificar se o clique foi fora do conteúdo
+//     const rect = othersDialog.getBoundingClientRect();
+//     const isOutside =
+//         event.clientX < rect.left ||
+//         event.clientX > rect.right ||
+//         event.clientY < rect.top ||
+//         event.clientY > rect.bottom;
 
-    if (isOutside) {
-        omeletDialog.close();
-        // Forçar reprocessamento para evitar problemas de renderização
-        setTimeout(() => {
-            omeletDialog.style.display = "none"; // Ocultar para garantir
-            omeletDialog.offsetHeight; // Trigger reflow
-            omeletDialog.style.display = ""; // Restaurar
-        }, 0);
-    }
-});
-
-const othersDialog = document.querySelector("#othersModal");
-const othersOp = document.querySelector("#othersOpen");
-const othersCl = document.querySelector("#othersClose");
-
-othersOp.addEventListener("click", () => {
-    othersDialog.showModal(); {
-        
-    }
-});
-othersCl.addEventListener("click", (e) => {
-    othersDialog.close();
-});
-// Fechar o diálogo ao clicar fora do conteúdo
-othersDialog.addEventListener("click", (event) => {
-    // Verificar se o clique foi fora do conteúdo
-    const rect = othersDialog.getBoundingClientRect();
-    const isOutside =
-        event.clientX < rect.left ||
-        event.clientX > rect.right ||
-        event.clientY < rect.top ||
-        event.clientY > rect.bottom;
-
-    if (isOutside) {
-        othersDialog.close();
-        // Forçar reprocessamento para evitar problemas de renderização
-        setTimeout(() => {
-            othersDialog.style.display = "none"; // Ocultar para garantir
-            othersDialog.offsetHeight; // Trigger reflow
-            othersDialog.style.display = ""; // Restaurar
-        }, 0);
-    }
-});
+//     if (isOutside) {
+//         othersDialog.close();
+//         // Forçar reprocessamento para evitar problemas de renderização
+//         setTimeout(() => {
+//             othersDialog.style.display = "none"; // Ocultar para garantir
+//             othersDialog.offsetHeight; // Trigger reflow
+//             othersDialog.style.display = ""; // Restaurar
+//         }, 0);
+//     }
+// });
 
 
 // // chickenCl.addEventListener("click", (e) => {

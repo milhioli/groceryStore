@@ -69,7 +69,7 @@ header h1{
 }
 .price{
     color: var(--color-8);
-    font-size: 0.5rem;
+    font-size: 0.8rem;
 }
 .card h2{
     color: var(--color-4);
@@ -132,11 +132,14 @@ dialog[open]{
     width: 200px;
     padding: 10px;
     background-color: var(--color-2);
-    border-bottom: 2px solid var(--color-4);
+    border: 1px solid;
+    border-bottom: 2px solid;
+    border-color: var(--color-4);
     border-radius: 5px;
-    
 }
-
+.card-item .price{
+    font-size: 1.2rem;
+}
 .container .splide__pagination__page{
     background-color: var(--color-7);
 }
@@ -145,9 +148,8 @@ dialog[open]{
 }
 
 .container{
-    height: 50vh;
+    height: 320px;
 }
-
 
 
 #slider2{
@@ -172,16 +174,35 @@ dialog[open]{
     font-size: 0.5rem;
     margin-left: auto;
 }
+.card-price{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 10px;
+}
+#slider1 .card-price{
+    flex-direction: row;
+}
 #slider2 .edge{
     margin-top: 5px;
     width: fit-content;
     background-color: var(--color-7);
-    color: #df4040;
+    color: #ccfcff;
     padding: 5px;
     border: 1px solid var(--stroke-color);
     border-radius: 5px;
     font-size: 0.5rem;
     margin-left: auto;
+}
+
+.slider-title{
+    color: var(--color-3);
+    font-size: 1rem;
+}
+/* cola */
+#slider2 .ml, #slider2 .price{
+    color: #df4040;
 }
 #slider2 .add-btn{
     background-color: #df4040;
@@ -189,9 +210,53 @@ dialog[open]{
 #slider2 .card-item{
     border-color: #df4040;
 }
-.slider-title{
-    color: var(--color-3);
-    font-size: 0.9rem;
+/* hnk */
+#slider1 .hnk .ml, #slider1 .hnk .price{
+    color: #05be0e;
+}
+#slider1 .hnk {
+    border-color: #05be0e;
+}
+#slider1 .hnk .add-btn{
+    background-color: #d10202;
+}
+/* org */
+#slider1 .org .ml, #slider1 .org .price{
+    color: #ff0808;
+}
+#slider1 .org {
+    border-color: #eeeeee;
+    
+}
+/* brm */
+#slider1 .brm .ml, #slider1 .brm .price{
+    color: #f0d806;
+}
+#slider1 .brm {
+    border-color: #d63d00;
+}
+#slider1 .brm .add-btn{
+    background-color: #d63d00;
+}
+/* ant */
+#slider1 .ant .ml, #slider1 .ant .price{
+    color: #1696ff;
+}
+#slider1 .ant {
+    border-color: #1696ff;
+}
+#slider1 .ant .add-btn{
+    background-color: #0071ce;
+}
+/* nana */
+#slider2 .nana{
+    border-color: #90e620;
+}
+#slider2 .nana .add-btn{
+    background-color: #90e620;
+}
+#slider2 .nana .ml, #slider2 .nana .price{
+    color: #90e620;
 }
 
 .add-btn{
@@ -200,5 +265,30 @@ dialog[open]{
     background-color: var(--color-4);
     border-radius: 4px;
     font-size: 0.5rem;
-    height: 20px;
+    height: 30px;
+}
+
+@media (min-width: 375px) {
+    .container{
+        height: 360px;
+    }
+}
+@media (min-width: 425px) {
+    .container{
+        height: 380px;
+    }
+}@media (min-width: 727px) {
+    .container{
+        height: 310px;
+    }
+}
+@media (min-width: 1024px) {
+    .container{
+        height: 340px;
+    }
+}
+@media (min-width: 1040px) {
+    .container{
+        height: 340px;
+    }
 }

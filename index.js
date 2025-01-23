@@ -1,6 +1,6 @@
 var splide = new Splide( '#slider1', {
     type   : 'loop',
-    padding: '1rem',
+    padding: '1.5rem',
     perPage: 1,
     arrows: false,
     autoplay:true,
@@ -9,9 +9,19 @@ var splide = new Splide( '#slider1', {
     pagination: false,
     mediaQuery: 'min',
     breakpoints: {
-		640: {
-			perPage: 4,
+		375: {
+			perPage: 1,
+            padding: '1rem',
         },
+        575: {
+            perPage: 2,
+        },
+        720:{
+            perPage: 3,
+        },
+        1024: {
+            perPage:4,
+        }
     }
   } );
   
@@ -30,9 +40,46 @@ var splide = new Splide( '#slider1', {
     mediaQuery: 'min',
     pagination: false,
     breakpoints: {
-		640: {
-			perPage: 4,
+		375: {
+			perPage: 1,
         },
+        575: {
+            perPage: 2,
+        },
+        720:{
+            perPage: 3,
+        },
+        1024: {
+            perPage:4,
+        }
+    }
+  }
+   ).mount();
+
+   new Splide( '#slider3', {
+    type   : 'loop',
+    padding: '1rem',
+    perPage: 1,
+    arrows: false,
+    autoplay:true,
+    gap : 10,
+    pauseOnHover :true,
+    mediaQuery: 'min',
+    mediaQuery: 'min',
+    pagination: false,
+    breakpoints: {
+		375: {
+			perPage: 1,
+        },
+        575: {
+            perPage: 2,
+        },
+        720:{
+            perPage: 3,
+        },
+        1024: {
+            perPage:4,
+        }
     }
   }
    ).mount();

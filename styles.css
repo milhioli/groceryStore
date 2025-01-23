@@ -66,6 +66,7 @@ header h1{
     border-radius: 4px;
     padding: 10px;
     gap: 10px;
+    text-align: right;
 }
 .price{
     color: var(--color-8);
@@ -171,7 +172,7 @@ dialog[open]{
     padding: 5px;
     border: 1px solid var(--stroke-color);
     border-radius: 5px;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     margin-left: auto;
 }
 .card-price{
@@ -266,8 +267,8 @@ dialog[open]{
     color: var(--color-3);
     background-color: var(--color-4);
     border-radius: 4px;
-    font-size: 0.5rem;
-    height: 30px;
+    font-size: 1rem;
+    height: 50px;
 }
 
 @media (min-width: 375px) {

@@ -1,14 +1,41 @@
-var splide = new Splide( '.splide', {
+var splide = new Splide( '#slider1', {
     type   : 'loop',
     padding: '1rem',
     perPage: 1,
     arrows: false,
     autoplay:true,
-    pagination: false,
     gap : 10,
+    pauseOnHover :true,
+    pagination: false,
+    mediaQuery: 'min',
+    breakpoints: {
+		640: {
+			perPage: 4,
+        },
+    }
   } );
   
   splide.mount();
+
+  new Splide( '#slider2', {
+    type   : 'loop',
+    padding: '1rem',
+    perPage: 1,
+    arrows: false,
+    autoplay:true,
+    gap : 10,
+    pauseOnHover :true,
+    direction: 'rtl',
+    mediaQuery: 'min',
+    mediaQuery: 'min',
+    pagination: false,
+    breakpoints: {
+		640: {
+			perPage: 4,
+        },
+    }
+  }
+   ).mount();
 
 
   const chickenDialog = document.querySelector("#chickenModal");

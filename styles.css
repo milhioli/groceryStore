@@ -132,9 +132,26 @@ dialog[open]{
     width: 200px;
     padding: 10px;
     background-color: var(--color-2);
-    border-bottom: 1.5px solid var(--stroke-color);
+    border-bottom: 2px solid var(--color-4);
     border-radius: 5px;
     
+}
+
+.container .splide__pagination__page{
+    background-color: var(--color-7);
+}
+.container .splide__pagination__page.is-active{
+    background-color: var(--stroke-color);
+}
+
+.container{
+    height: 280px;
+}
+
+
+
+#slider2{
+    text-align: left;
 }
 
 .card-item img{
@@ -153,6 +170,24 @@ dialog[open]{
     border: 1px solid var(--stroke-color);
     border-radius: 5px;
     font-size: 0.5rem;
+    margin-left: auto;
+}
+#slider2 .edge{
+    margin-top: 5px;
+    width: fit-content;
+    background-color: var(--color-7);
+    color: #df4040;
+    padding: 5px;
+    border: 1px solid var(--stroke-color);
+    border-radius: 5px;
+    font-size: 0.5rem;
+    margin-left: auto;
+}
+#slider2 .add-btn{
+    background-color: #df4040;
+}
+#slider2 .card-item{
+    border-color: #df4040;
 }
 .slider-title{
     color: var(--color-3);

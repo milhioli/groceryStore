@@ -15,6 +15,7 @@
         <!-- SwiperJS CSS (for sliders) link -->
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" 
     rel="stylesheet">
+    
 
       <link rel='stylesheet' 
       href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
@@ -88,7 +89,50 @@
             <h2 class="title">
                 Bebidas
             </h2>
-            <div class="container splide">
+            <div class="container splide" id="slider1">
+                <div class="wrapper splide__track">
+                    <ul class="card-list splide__list">
+                        <li class="card-item splide__slide">
+                            <a href="#">
+                                <img src="img/drinks/cola.png" alt="Imagem do refrigerante Coca Cola">
+                                <p class="edge">Cervejas</p>
+                                <h2 class="slider-title">Coca Cola 1L</h2>
+                                <p class="price">R$10,00</p>
+                                <button class="add-btn">adicionar</button>
+                            </a>
+                        </li>
+                        <li class="card-item splide__slide">
+                            <a href="#">
+                                <img src="img/drinks/cola.png" alt="Imagem do refrigerante Coca Cola">
+                                <p class="edge">refrigerantes</p>
+                                <h2 class="slider-title">Coca Cola 1L</h2>
+                                <p class="price">R$10,00</p>
+                                <button class="add-btn">adicionar</button>
+                            </a>
+                        </li>
+                        <li class="card-item splide__slide">
+                            <a href="#">
+                                <img src="img/drinks/cola.png" alt="Imagem do refrigerante Coca Cola">
+                                <p class="edge">refrigerantes</p>
+                                <h2 class="slider-title">Coca Cola 1L</h2>
+                                <p class="price">R$10,00</p>
+                                <button class="add-btn">adicionar</button>
+                            </a>
+                        </li>
+                        <li class="card-item splide__slide">
+                            <a href="#">
+                                <img src="img/drinks/cola.png" alt="Imagem do refrigerante Coca Cola">
+                                <p class="edge">refrigerantes</p>
+                                <h2 class="slider-title">Coca Cola 1L</h2>
+                                <p class="price">R$10,00</p>
+                                <button class="add-btn">adicionar</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container splide" id="slider2">
                 <div class="wrapper splide__track">
                     <ul class="card-list splide__list">
                         <li class="card-item splide__slide">
@@ -128,15 +172,11 @@
                             </a>
                         </li>
                     </ul>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-    
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </section>
+
+        
         
     </main>
     
@@ -305,7 +345,9 @@
         
     </dialog>
     <!-- Linkin SwiperJs Script -->
+
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    
     <script src="index.js"></script>
 </body>
 </html>

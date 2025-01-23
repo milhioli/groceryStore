@@ -4,6 +4,7 @@ var splide = new Splide( '.splide', {
     perPage: 1,
     arrows: false,
     autoplay:true,
+    pagination: false,
     gap : 10,
   } );
   

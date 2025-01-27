@@ -182,6 +182,44 @@ window.addEventListener('scroll', highlightButtonOnScroll);
 // Escutar o evento de rolagem
 window.addEventListener('scroll', highlightButtonOnScroll);
 
+//checkbox
+const normalCheckbox = document.getElementById('checkbox-normal');
+    const kidsCheckbox = document.getElementById('checkbox-kids');
+
+    function updateVisibility() {
+        const kidsElements = document.querySelectorAll('[for="kids"]');
+        const normalElements = document.querySelectorAll('[for="normal"]');
+
+        if (normalCheckbox.checked) {
+            kidsElements.forEach(el => el.style.display = 'none');
+            normalElements.forEach(el => el.style.display = 'flex');
+        } else if (kidsCheckbox.checked) {
+            normalElements.forEach(el => el.style.display = 'none');
+            kidsElements.forEach(el => el.style.display = 'flex');
+        } else {
+            normalCheckbox.checked = true;
+            updateVisibility();
+        }
+    }
+
+    normalCheckbox.addEventListener('change', function () {
+        if (normalCheckbox.checked) {
+            kidsCheckbox.checked = false;
+        }
+        updateVisibility();
+    });
+
+    kidsCheckbox.addEventListener('change', function () {
+        if (kidsCheckbox.checked) {
+            normalCheckbox.checked = false;
+        }
+        updateVisibility();
+    });
+
+    // Ensure at least one checkbox is selected on page load
+    updateVisibility();
+
+
 // const meatDialog = document.querySelector("#meatModal");
 // const meatOp = document.querySelector("#meatOpen");
 // const meatCl = document.querySelector("#meatClose");

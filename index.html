@@ -382,44 +382,73 @@
     </section>
     
 
-    <dialog id="chickenModal" >
-        <div class="chicken-container" id="chickenOpen">
-            
-                <img src="img/images 1 (1).png" alt="">
+    <dialog id="chickenModal">
+        <div class="chicken-container forms" id="chickenOpen">
+            <div class="close"><button id="chickenClose" class="closing"><i class="ri-close-large-fill"></i></button></div>
 
             <div class="chicken-box">
                 <div class="form">
-                    <div><button id="chickenClose"><i class="ri-close-large-fill"></i></button></div>
+                    
                     <div id="chicken-form">
+                        <h2 id="h2">Escolha</h2>
+                        <p class="dscrptn">obrigatório<span>*</span></p>
                         <div class="size">
-                            <h2>Escolha</h2>
-                            <p class="dscrptn">obrigatório</p>
-                            <label for="normal">Padrão</label>
-                            <input type="checkbox">
-                            <label for="kids">Kids</label>
-                            <input type="checkbox">
+                            <div class="select">
+                                <label  id="normal">Padrão</label>
+                                <input type="checkbox" id="checkbox-normal">
+                            </div>
+                            <div class="select">
+                                <label  id="kids">Kids</label>
+                                <input type="checkbox" id="checkbox-kids">
+                            </div>
                         </div>
-                        <h2 id="h2">Frango</h2>
+                        <h2>Frango</h2>
+                        <p class="dscrptn">obrigatório<span>*</span></p>
                         <div class="select">
                         <label for="grelhado">
                             Grelhado 
                         </label>
+                        <div class="type" for="normal">
+                            <p class="price" >R$10,00</p>
                             <input type="checkbox">
+                        </div>
+                        <div class="type" for="kids">
+                            <p class="price" >R$08,00</p>
+                            <input type="checkbox">
+                        </div>
+                            
                         </div>
                         <div class="select">
                             <label for="milanesa">
                                 À milanesa 
                             </label>
-                            <input type="checkbox">
+                            <div class="type" for="normal">
+                                <p class="price" >R$10,00</p>
+                                <input type="checkbox" id="milanesa">
+                            </div>
+                            <div class="type" for="kids">
+                                <p class="price" >R$08,00</p>
+                                <input type="checkbox">
+                            </div>
+                            
                         </div>
                         <div class="select">
-                            <label for="parmegiana">
-                                À parmegiana 
+                            <label for="milanesa">
+                                À milanesa 
                             </label>
-                            <input type="checkbox">
+                            <div class="type" for="normal">
+                                <p class="price" >R$10,00</p>
+                                <input type="checkbox">
+                            </div>
+                            <div class="type" for="kids">
+                                <p class="price" >R$08,00</p>
+                                <input type="checkbox">
+                            </div>
+                            
                     </div>
                     <div id="side-dishes-form">
                         <h2>Acompanhamentos</h2>
+                        <p class="dscrptn">obrigatório<span>*</span></p>
                         <div class="select">
                             <label for="salada">
                                 Salada
@@ -477,6 +506,7 @@
                     </div>
                     <div id="xtra">
                         <h2>+ Proteína</h2>
+                        <p class="dscrptn">opcional</p>
                         <div class="select">
                         <label for="frango-grelhado">
                             Frango grelhado
@@ -529,12 +559,21 @@
                     <div class="description">
                         <textarea name="description" id="" style="resize: none;" rows="none" cols="none" placeholder="Deseja alguma alteração? Escreva aqui"></textarea>
                     </div>
+                    </div>
                 </div>
-            </div>
+                
             
         </div>
-        
+        <div class="price-box">
+    
+            <div class="price-show">
+                <h2 class="price-total" id="h2">Total</h2>
+                <p id="total"></p>
+            </div>
+            <button class="add-card">Concluído</button>
+    </div>
     </dialog>
+
     <!-- Linkin SwiperJs Script -->
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>

@@ -366,16 +366,27 @@ dialog .dscrptn span{
 .price-box #h2{
     font-size: 0.8rem;
 }
-@media (min-width: 375px) {
+@media (min-width: 320px) {
     .container{
         height: 360px;
     }
 }
+@media (min-width: 390px) {
+    .container{
+        height: 390px;
+    }
+}
 @media (min-width: 425px) {
     .container{
-        height: 380px;
+        height: 430px;
     }
-}@media (min-width: 727px) {
+}
+    @media (min-width: 500px) {
+        .container{
+            height: 480px;
+        }
+}
+@media (min-width: 727px) {
     .container{
         height: 310px;
     }

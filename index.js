@@ -219,6 +219,84 @@ const normalCheckbox = document.getElementById('checkbox-normal');
     // Ensure at least one checkbox is selected on page load
     updateVisibility();
 
+    // Obtém os checkboxes e o elemento de total
+const checkboxes = document.querySelectorAll('.type input[type="checkbox"]');
+const totalElement = document.getElementById('total');
+
+function updateTotal() {
+    let total = 0;
+
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            // Encontra o elemento <p class="price"> relacionado ao checkbox
+            const priceElement = checkbox.closest('.type').querySelector('.price');
+            if (priceElement) {
+                // Converte o preço para número e soma ao total
+                const price = parseFloat(priceElement.textContent.replace('R$', '').replace(',', '.'));
+                if (!isNaN(price)) {
+                    total += price;
+                }
+            }
+        }
+    });
+
+    // Atualiza o elemento de total com o novo valor
+    totalElement.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+}
+
+// Adiciona o listener de mudança a todos os checkboxes
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', updateTotal);
+});
+
+// Inicializa o total na carga da página
+updateTotal();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const checkboxes = document.querySelectorAll("#choose input[type='checkbox']");
+    
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener("change", () => {
+            const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
+
+            if (checkedCount === 1) {
+                // Desabilita todas as caixas que não estão marcadas
+                checkboxes.forEach(cb => {
+                    if (!cb.checked) {
+                        cb.disabled = true;
+                    }
+                });
+            } else {
+                // Habilita todas as caixas quando o número de marcadas é menor que 1
+                checkboxes.forEach(cb => cb.disabled = false);
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const checkboxes = document.querySelectorAll("#side-dishes-form input[type='checkbox']");
+    
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener("change", () => {
+            const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
+
+            if (checkedCount === 3) {
+                // Desabilita todas as caixas que não estão marcadas
+                checkboxes.forEach(cb => {
+                    if (!cb.checked) {
+                        cb.disabled = true;
+                    }
+                });
+            } else {
+                // Habilita todas as caixas quando o número de marcadas é menor que 3
+                checkboxes.forEach(cb => cb.disabled = false);
+            }
+        });
+    });
+});
+
 
 // const meatDialog = document.querySelector("#meatModal");
 // const meatOp = document.querySelector("#meatOpen");

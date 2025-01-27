@@ -301,9 +301,13 @@ dialog{
 }
 dialog .dscrptn{
     font-size: 0.6rem;
-    color: var(--color-6);
+    color: var(--color-4);
     margin-bottom: 15px;
 
+}
+.instruction{
+    color: var(--color-6);
+    font-size: 0.8rem;
 }
 
 dialog h2{
@@ -314,8 +318,9 @@ dialog h2{
     margin-top: 0;
 }
 dialog .dscrptn span{
-    color: var(--color-4);
+    color: #ff0808;
 }
+
 .select{
     display: flex;
     justify-content: space-between;
@@ -327,8 +332,12 @@ dialog .dscrptn span{
 .size .select{
     gap: 10px;
     color: var(--color-4);
-    font-size: 1.2rem;
+    margin-top: 10px;
+    font-size: 1.5rem;
     font-weight: 700;
+    border-bottom: 1px solid var(--stroke-color);
+    padding: 10px;
+    padding-top: 0px;
 }
 
 .price-show{

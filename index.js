@@ -348,11 +348,13 @@ button.addEventListener('click', () => {
     checkboxContainer.style.marginBottom = '0.5rem';
     checkboxContainer.style.display = 'flex';
     checkboxContainer.style.gap = '1rem';
+    checkboxContainer.className = 'checking';
 
-    const extraCheckbox = createPriceCheckbox('N', 10, true); // Extra selecionado por padrão com preço de 10
-    const pCheckbox = createPriceCheckbox('P', 20);
-    const mCheckbox = createPriceCheckbox('M', 30);
-    const gCheckbox = createPriceCheckbox('G', 40);
+    
+    const extraCheckbox = createPriceCheckbox('N - R$10,00', 10, true); // Extra selecionado por padrão com preço de 10
+    const pCheckbox = createPriceCheckbox('P - R$20,00', 20);
+    const mCheckbox = createPriceCheckbox('M - R$30,00', 30);
+    const gCheckbox = createPriceCheckbox('G - R$40,00', 40);
 
     // Adiciona os checkboxes ao container
     checkboxContainer.appendChild(extraCheckbox);

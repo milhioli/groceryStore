@@ -406,6 +406,10 @@ select {
 .price-box #h2{
     font-size: 0.8rem;
 }
+.checking label{
+    font-size: 0.6rem;
+    align-items: center;
+}
 @media (min-width: 320px) {
     .container{
         height: 360px;
